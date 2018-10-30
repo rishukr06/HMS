@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HMS</title>
+	<style type="text/css">
+	#navbar{
+		background-color:#8A6D43;
+		position:fixed;
+		margin-top: 0px;
+		display: inline-block; 	
+		font-family:Candara;	
+	}
+	#td{
+
+		padding: 10px;
+	    color: white;
+  	}
+  	.modal {
+    display: none; 
+    position:fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+}
+
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+  	#facebook{
+        background-color: #232390;
+        margin-top: 200px;
+        color: white;
+        width: 413px;
+        height: 55px;
+        cursor: pointer;
+        font-family: Candara;
+        font-size: 15px;
+        border-radius: 4px;
+  	}	
+  	input{
+		padding: 5px;
+		border-radius: 4px;
+		border-color: brown;
+		width:400px;
+		border:1px solid #8A6D43;
+	}
+	#button{
+		box-sizing: border-box;
+        border: 2px solid #8A6D43;
+    	border-radius: 4px;
+    	height: 30px;
+    	width: 70px;
+    	font-size:14px;
+    	font-family:Candara;
+    	background-color:#8A6D43;
+    	cursor: pointer;
+    	text-align: center;
+    	color: white;
+    }
+    a{
+    	color: #8A6D43;
+        text-decoration: none;
+    }
+   a:hover {
+   text-decoration: underline; 
+}
+	</style>
+	<script type="text/javascript">
+		 function changeColor(x){
+       x.style.background="  #9b794b";
+   }
+
+   function changeColor1(x){
+       x.style.background="#8A6D43";
+   }
+
+   function changeColor2(x){
+       x.style.background="#1e1e7b";
+   }
+
+   function changeColor3(x){
+       x.style.background="#232390";
+   }
+
+       function changeColor5(x){
+       x.style.background=" #675132";
+   }
+	</script>
+</head>
+<body>
+<div id="navbar">
+	<table>
+		<tr><td style="color: white;font-family: Bradley Hand ITC;font-size: 20px;padding-left: 8px;">A.Roma</td>
+			<td id="td" style="padding-left: 620px">|</td>
+			<td id="td" style="cursor: pointer;" onmouseover="changeColor(this)" onmouseout="changeColor1(this)" onclick="window.open('Hotel management.html')">Home</td>
+			<td id="td">|</td>
+			<td id="td" style="cursor: pointer;" onmouseover="changeColor(this)" onmouseout="changeColor1(this)" onclick="myMove()"><span id="myBtn">Contact us</span></td>
+			<td id="td">|</td>
+			<td id="td" style="cursor: pointer;" onmouseover="changeColor(this)" onmouseout="changeColor1(this)">Go To Hotel List</td>
+			<td id="td">|</td>
+			<td id="td" style="cursor: pointer;" onmouseover="changeColor(this)" onmouseout="changeColor1(this)">New Search</td>
+			<td id="td">|</td>
+			<td id="td" style="cursor: pointer;" onmouseover="changeColor(this)" onmouseout="changeColor1(this)">Sign In / Register</td>
+		</tr>
+	</table>
+</div>
+<center><table>
+<tr><td>
+		<div id="facebook" onmouseover="changeColor2(this)" onmouseout="changeColor3(this)">
+			<table>
+				<tr>
+					<td><img style="margin-left: 10px;padding:10px;" src="images/fb-art.png" height="30" width="30"></td>
+					<td>connect with facebook</td>
+				</tr>
+			</table><hr>
+		</div></td>
+		</tr>
+		<tr>
+			<td style="padding-top: 20px;color: grey;font-size: 12px; font-family:Candara;padding-left: 20px;">
+				Already a member? You can log in with your member details here:
+			</td>
+		</tr>
+		<tr>
+			<td><input type="text" name="" placeholder="Email Address" style="margin-top: 10px;" required></td>
+		</tr>
+        <tr>
+			<td><input type="password" name="" placeholder="Password" style="margin-top: 5px;" required></td>
+		</tr>
+		<tr>
+			<td>
+				<div id="button" style="margin-top: 10px;margin-left:155px " onmouseover="changeColor5(this)" onmouseout="changeColor1(this)"><center style="padding: 5px;">Sign up</center></font></div>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding-top: 15px;">
+				<span  style="margin-top: 40px;color: grey;font-size: 12px; font-family:Candara;padding-left: 110px;"><a href="register.html">Not a member yet? Regiter now</a></span>
+			</td>
+		</tr>
+		<tr>
+			<td><span  style="margin-top: 40px;color: grey;font-size: 12px; font-family:Candara;padding-left: 90px;"><a href="">forgotten password? click here to reset</a></span></td>
+		</tr>
+		<tr>
+			<td><hr></td>
+		</tr>
+		</table>
+
+<div id="myModal" class="modal">
+
+  
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p style="font-family: candara;font-size: 20px">Get In Touch</p>
+    <p><input  style="border:1px solid #ccc;background: white;padding: 5px;width:330px;" type="text" name="" placeholder="Name"></p>
+    <p><input  style="border:1px solid #ccc;background: white;padding: 5px;width: 330px;" type="text" name="" placeholder="Email"></p>
+    <p><textarea style="border:1px solid #ccc; border-radius: 4px; height:100px;width: 325px;" placeholder="Your Message...."></textarea></p>
+    <p><img src="images/send-button.jpg" height="50" style="margin-left: 110px;cursor: pointer;"></p>
+ </div>
+
+</div>
+<script>
+
+var modal = document.getElementById('myModal');
+
+
+var btn = document.getElementById("myBtn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+ btn.onclick = function () {
+   modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>

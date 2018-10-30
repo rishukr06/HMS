@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HMS</title>
+	
+<script type="text/javascript" src="rating.js"></script>
+<link rel="stylesheet" type="text/css" href="logo.css">
+<style type="text/css">
+body
+{
+	margin: 0;
+	padding: 0;
+}
+	#navbar{
+		background: #8A6D43;
+		position:fixed;
+		margin-top: 0px;
+		display: inline-block; 
+		font-family:Candara;
+		width: 100%;
+
+
+		
+	}
+	#td{
+
+		padding: 10px;
+	    color: white;
+
+	}
+	#l_novbar{
+		background: grey;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+	}
+	#Modify_search{
+		padding-top: 40px;
+	}
+	input {
+    
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    height: 30px;
+    width: 180px;
+    background-color:#ccc;
+}
+	select{
+		box-sizing: border-box;
+        border: 2px solid #ccc;
+    	border-radius: 4px;
+    	height: 30px;
+    	width: 200px;
+    	background-color:#ccc;
+    	cursor: pointer;
+	}
+	#search_button{
+		box-sizing: border-box;
+        border: 2px solid  #675132;
+    	border-radius: 4px;
+    	height: 35px;
+    	width: 100px;
+    	background-color: #675132;
+    	cursor: pointer;
+    	text-align: center;
+    	color: white
+	}
+	#view_Hotel{
+		margin-top: 40px;
+		box-sizing: border-box;
+        border: 2px solid #ccc;
+    	border-radius: 4px;
+    	height: 381px;
+    	width: 1015px;
+    	background-color:wheat;
+    	box-shadow: 3px 3px 8px #ccc;
+    	
+	}
+	#book_button{
+		box-sizing: border-box;
+        border: 2px solid #8A6D43;
+    	border-radius: 4px;
+    	height: 50px;
+    	width: 120px;
+    	background-color:#8A6D43;
+    	cursor: pointer;
+    	text-align: center;
+    	color: white;
+    	margin-left: 550px;
+    }
+    #hotel_facilites{
+		box-sizing: border-box;
+        border: 2px solid #ccc;
+    	border-radius: 4px;
+    	height: 372px;
+    	width: 235px;
+    	background-color:#ccc;
+    	box-shadow: 3px 3px 8px #ccc;
+    	margin-left: 60px;
+    	position:static; 
+    	
+	}
+	.modal {
+    display: none; 
+    position:fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+}
+
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+#rating
+		{
+			cursor: pointer;
+			color: orange;
+			font-size: 28px;
+			padding: 0px;
+			margin: 0px;
+		}
+		.footer
+		{	
+			margin-top: 10px;
+			background-color: #292929;
+			position: absolute;
+			max-height: 250px;
+			width: 100%;
+			z-index: -1;
+			overflow: hidden;
+		}
+		.footer1
+		{	
+			top:220px;
+			width: 100%;
+			z-index: 1;
+			color: #fff;
+			font-family: candara;
+			background-color: black;
+			position: absolute;
+			text-align: center;
+			min-height: 30px;
+		}
+		.footer_element
+		{
+			color: #ccc;
+			font-size: 14px;
+			text-transform: uppercase;
+		}
+		
+</style>
+<script type="text/javascript">
+
+	 function changeColor(x){
+       x.style.background="  #9b794b";
+   }
+
+   function changeColor1(x){
+       x.style.background="#8A6D43";
+   }
+        function changeColor3(x){
+       x.style.background="white";
+   }
+       function changeColor4(x){
+       x.style.background="#ccc";
+   }
+
+       function changeColor5(x){
+       x.style.background=" #675132";
+   }
+
+       function changeColor6(x){
+       x.style.background="#564329";
+   }
+    
+       function changeColor7(x){
+       x.style.color="black";
+   }
+
+       function changeColor8(x){
+       x.style.color="grey";
+   }
+</script>
+</head>
+<body>
+
+
+
+<div id="navbar">
+	<table>
+		<tr><td style="color: white;font-family: Bradley Hand ITC;font-size: 20px;padding-left: 4px;">A.Roma</td>
+			<td id="td" style="padding-left: 604px">|</td>
+			<td id="td" style="cursor: pointer;" onmouseover="changeColor(this)" onmouseout="changeColor1(this)" onclick="window.open('Hotel management.html')">Home</td>
+			<td id="td">|</td>
+			<td id="td" style="cursor: pointer;" onmouseover="changeColor(this)" onmouseout="changeColor1(this)" onclick="myMove()"><span id="myBtn">Contact us</span></td>
+			<td id="td">|</td>
+			<td id="td" style="cursor: pointer;" onmouseover="changeColor(this)" onmouseout="changeColor1(this)">Go To Hotel List</td>
+			<td id="td">|</td>
+			<td id="td" style="cursor: pointer;" onmouseover="changeColor(this)" onmouseout="changeColor1(this)">New Search</td>
+			<td id="td">|</td>
+			<td id="td" style="cursor: pointer;" onmouseover="changeColor(this)" onmouseout="changeColor1(this)" onclick="window.open('singIn_Up.html')">Sign In / Register</td>
+		</tr>
+	</table>
+</div>
+<div id="l_novbar">
+	<table id="Modify_search">
+		<tr>
+			<td id="td" style="padding-left: 45px" >YOUR<BR><font style="margin-left: 8px;font-size: 12px;">STAY</font></td>
+			<td id="td"><img src="images/icon_403-512.png" height="30" width="20"></td>
+			<td id="td"><input type="text" placeholder="Location (optional)" onmouseover="changeColor3(this)" onmouseout="changeColor4(this)"></td>
+			<td id="td"><input type="date" placeholder="mm/dd/yy"  onmouseover="changeColor3(this)" onmouseout="changeColor4(this)"></td>
+			<td id="td"><input type="date" placeholder="mm/dd/yy"  onmouseover="changeColor3(this)" onmouseout="changeColor4(this)"></td>
+			<td id="td"><select><option>1 Adults</option>
+						<option>2 Adults</option>
+						<option>3 Adults</option></select></td>
+			<td id="td"><select><option>1 Children</option>
+						<option>2 Children</option></select></td>	
+						<td id="td">
+							<div id="search_button" onclick="alert('under_Development')" onmouseover="changeColor6(this)" onmouseout="changeColor5(this)">
+								<center style="margin-top: 5px">search</center>
+							</div>
+						</td>		
+		</tr>
+	</table>
+</div>
+<div id="view_Hotel">
+	<table>
+		<tr>
+			<td><a href="images/deluxe-king-garden-1920x960.jpg"><img title="click to view" style="border-radius: 4px;" src="images/deluxe-king-garden-1920x960.jpg" height="350px" width="300px" ></a></td>
+			<td>
+				<div style="background-color:#ccc; height:80px; width:704px; margin-bottom: 250px;border-radius: 0px;">
+				    	<h1 style="margin-left:10px ">Deluxe Room<br>
+				    	<!--rating-->
+				    	<div id="rating">
+							<span id="checked1" onclick="check1()">&#x2606</span>
+							<span id="checked2" onclick="check2()">&#x2606</span>
+							<span id="checked3" onclick="check3()">&#x2606</span>
+							<span id="checked4" onclick="check4()">&#x2606</span>
+							<span id="checked5" onclick="check5()">&#x2606</span>
+						</div></h1>
+				    	<br>
+				    	<font>
+				    		<font size="5">W</font>hen you choose our elegant and comfortable Deluxe rooms, you get the choice of double or twin in<br>spacious and beautifully decorated surroundings. However long your stay, the room is designed to meet<br>every need and provide a place to relax, work and more.
+				    	</font><br>
+				    	<font size="6" style="margin-left: 480px;">
+				    		$300
+				    	</font><font size="5">avg.per night</font><br>
+				    	<div id="book_button" onclick="window.open('book.html')"  onmouseover="changeColor5(this)" onmouseout="changeColor1(this)">
+								<center style="margin-top: 10px"><font size="5"> Book now</font></center>
+							</div>
+
+						<img style="margin-top: 5px;border-bottom-right-radius: 4px;" src="images/lowerdiv.jpg"  >
+				</div>
+			</td>
+			<td>
+				<div id="hotel_facilites">
+					 <p style="color:grey;font-family: Candara;margin-left: 50px; cursor: initial;">HOTEL FACILITIES</p>
+					 <p style="color:grey;font-family: Candara;margin-left: 4px;" onmouseover="changeColor7(this)" onmouseout="changeColor8(this)" >Wifi Available <img src="images/wifi-icon.png" height="25px" style="margin-left: 90px;"></p>
+					 <p style="color:grey;font-family: Candara;margin-left: 4px;" onmouseover="changeColor7(this)" onmouseout="changeColor8(this)">Air Conditioning <img src="images/140023-200.png" height="25px" style="margin-left: 72px;"></p>
+					 <p style="color:grey;font-family: Candara;margin-left: 4px;" onmouseover="changeColor7(this)" onmouseout="changeColor8(this)">Spa <img src="images/BATHROBE_-512.png" height="25px" style="margin-left: 155px;"></p>
+					 <p style="color:grey;font-family: Candara;margin-left: 4px;" onmouseover="changeColor7(this)" onmouseout="changeColor8(this)">Swimming pool <img src="images/6327-200.png" height="25px" style="margin-left: 75px;"></p>
+					 <p style="color:grey;font-family: Candara;margin-left: 4px;" onmouseover="changeColor7(this)" onmouseout="changeColor8(this)">Restaurant <img src="images/6564-200.png" height="25px" style="margin-left: 105px;"></p>
+					  <p style="color:grey;font-family: Candara;margin-left: 4px;"onmouseover="changeColor7(this)" onmouseout="changeColor8(this)">Parking Available <img src="images/parking-icon-png-20.png" height="25px" style="margin-left: 65px;"></p>
+					  <p style="color:grey;font-family: Candara;margin-left: 4px;" onmouseover="changeColor7(this)" onmouseout="changeColor8(this)">Hotel Bar <img src="images/drink_bar_cocktails.png" height="25px" style="margin-left: 117px;"></p>
+				</div>
+			</td>
+		</tr>
+
+	</table>
+</div>
+<div id="view_Hotel">
+	<table>
+		<tr>
+			<td><a href="images/premier-room-twin-city-1920x960.jpg"><img title="click to view" style="border-radius: 4px;" src="images/premier-room-twin-city-1920x960.jpg" height="350px" width="300px" ></a></td>
+			<td>
+				<div style="background-color:#ccc; height:80px; width:704px; margin-bottom: 250px;border-radius: 0px;">
+				    	<h1 style="margin-left:10px ">primer Room<br>
+				    	<!--rating-->
+				    	<div id="rating">
+							<span id="checked11" onclick="check11()">&#x2606</span>
+							<span id="checked21" onclick="check21()">&#x2606</span>
+							<span id="checked31" onclick="check31()">&#x2606</span>
+							<span id="checked41" onclick="check41()">&#x2606</span>
+							<span id="checked51" onclick="check51()">&#x2606</span>
+						</div>
+				    	</h1><br>
+				    	<font>
+				    		<font size="5">O</font>ur Premier room gives the luxury upgrade you want, with added space and amazing views of the<br> surrounding parks and gardens. If you're staying at A.Roma Lifestyle Hotel for business or pleasure,<br> the Premier room offers everything that you need. 
+				    	</font><br>
+				    	<font size="6" style="margin-left: 480px;">
+				    		$285
+				    	</font><font size="5">avg.per night</font><br>
+				    	<div id="book_button" onclick="window.open('book1.htm')"  onmouseover="changeColor5(this)" onmouseout="changeColor1(this)">
+								<center style="margin-top: 10px"><font size="5"> Book now</font></center>
+							</div>
+
+						<img style="margin-top: 15px;border-bottom-right-radius: 4px;" src="images/lowerdiv2.jpg"  >
+				</div>
+			</td>
+		</tr>
+	</table>		
+</div>
+<div id="view_Hotel">
+	<table>
+		<tr>
+			<td><a href="images/executive-room2-hotel-morgana.jpg"><img title="click to view" style="border-radius: 4px;" src="images/executive-room2-hotel-morgana.jpg" height="350px" width="300px" ></a></td>
+			<td>
+				<div style="background-color:#ccc; height:80px; width:704px; margin-bottom: 250px;border-radius: 0px;">
+				    	<h1 style="margin-left:10px ">Executive Room<br>
+				    		<!--rating-->
+				    	<div id="rating">
+							<span id="checked12" onclick="check12()">&#x2606</span>
+							<span id="checked22" onclick="check22()">&#x2606</span>
+							<span id="checked32" onclick="check32()">&#x2606</span>
+							<span id="checked42" onclick="check42()">&#x2606</span>
+							<span id="checked52" onclick="check52()">&#x2606</span>
+						</div>
+				    	</h1><br>
+				    	<font>
+				    		<font size="5">W</font>hen you're in Rome for business or visiting for a conference, you want a room that not only meets your needs but that gives you a place to relax and unwind. The spacious and elegant Executive room is the perfect choice for business travellers and holidaymakers who want a comfortable room with plenty of space.
+				    	</font><br>
+				    	<font size="6" style="margin-left: 480px;">
+				    		$250
+				    	</font><font size="5">avg.per night</font><br>
+				    	<div id="book_button" onclick="window.open('book3.html')"  onmouseover="changeColor5(this)" onmouseout="changeColor1(this)">
+								<center style="margin-top: 10px"><font size="5"> Book now</font></center>
+							</div>
+
+						<img style="margin-top: 15px;border-bottom-right-radius: 4px;" src="images/lowerdiv2.jpg"  >
+				</div>
+			</td>
+		</tr>
+	</table>		
+</div>
+
+<div id="myModal" class="modal">
+
+  
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p style="font-family: candara;font-size: 20px">Get In Touch</p>
+    <p><input  style="border:1px solid #ccc;background: white;padding: 5px;width:330px;" type="text" name="" placeholder="Name"></p>
+    <p><input  style="border:1px solid #ccc;background: white;padding: 5px;width: 330px;" type="text" name="" placeholder="Email"></p>
+    <p><textarea style="border:1px solid #ccc; border-radius: 4px; height:100px;width: 325px;" placeholder="Your Message...."></textarea></p>
+    <p><img src="images/send-button.jpg" height="50" style="margin-left: 110px;cursor: pointer;"></p>
+ </div>
+
+</div>
+<script>
+
+var modal = document.getElementById('myModal');
+
+
+var btn = document.getElementById("myBtn");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+ btn.onclick = function () {
+   modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<!--footer-->
+<div class="footer">
+<table class="footer_element" border="0">
+	<tr>
+		<th style="font-family: sans-serif;font-size:20px;padding-left: 80px;padding-top: 30px;">INDIAN HOTELS COMPANY LIMITED</th>
+		<th style="font-family: sans-serif;font-size:20px;padding-left: 160px;padding-top: 30px;">Our Brands</th>
+		<th style="font-family: sans-serif;font-size:20px;padding-left: 140px;padding-top: 30px;">Contact Details</th>
+	</tr>
+	<tr>
+		<td style="padding-left: 80px;padding-top: 20px;" >ABOUT AROMA</td>
+		<td style="padding-left: 166px;padding-top: 20px;" >taj</td>
+		<td style="padding-left: 228px;padding-top: 20px;" >privacy policy</td>
+	</tr>
+	<tr>
+		<td style="padding-left: 80px;padding-top: 20px;">INVESTORS</td>
+		<td style="padding-left: 166px;padding-top: 20px;" >vivanta</td>
+		<td style="padding-left: 228px;padding-top: 20px;" >terms of use</td>
+	</tr>
+	<tr>
+		<td style="padding-left: 40px;padding-top: 20px;">DEVELOPERRS</td>
+		<td style="padding-left: 166px;padding-top: 20px;" >the geatway</td>
+		<td style="padding-left: 228px;padding-top: 20px;" >
+			<!--logo animation-->
+		
+			<div id="container">
+			<img src="images/flogo.png">
+			<img src="images/flogo.png">
+			<img src="images/flogo.png">
+			<img src="images/flogo.png">
+			<img src="images/flogo.png">
+			</div>
+			<div id="container1">
+			<img src="images/ilogo.png">
+			<img src="images/ilogo.png">
+			<img src="images/ilogo.png">
+			<img src="images/ilogo.png">
+			<img src="images/ilogo.png">
+			</div>
+			<div id="container2">
+			<img src="images/tlogo.png">
+			<img src="images/tlogo.png">
+			<img src="images/tlogo.png">
+			<img src="images/tlogo.png">
+			<img src="images/tlogo.png">
+			</div>
+			<div id="container3">
+			<img src="images/ylogo.png">
+			<img src="images/ylogo.png">
+			<img src="images/ylogo.png">
+			<img src="images/ylogo.png">
+			<img src="images/ylogo.png">
+			</div>
+			
+		</td>
+	</tr>
+</table>
+<div class="footer1">&copy;copyright: Rishu_project</div>	
+</div>
+</body>
+</html>

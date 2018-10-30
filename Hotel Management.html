@@ -1,0 +1,417 @@
+<html>
+<head>
+    <title>Aroma</title>
+    <style>
+        #logo{
+            width: 10px;
+            
+        }
+        h
+        {   
+            padding-left: 40px;
+            font-family: sans-serif;
+            font-size: 35px;
+            color: gray;
+            background-attachment: inherit;
+        }
+    hr
+        {
+            color: gray;
+        }
+    a
+        {
+            color: gray;
+            text-decoration: none;
+            padding-left: 70px;
+            padding-right: 65px;
+        }
+    a:hover
+        {
+            font-family: inherit;
+            color: green;
+            text-decoration: none;
+        }
+    a:visited
+        {
+            font-family: inherit;
+            color: grey;
+            text-decoration: none;
+        }
+    body
+        {
+            height: 550px;
+            height: 1100px;
+        }
+    h1
+        {
+            font-size: 20px;
+            font-family:inherit;
+            padding-left: 35px;
+            padding-top: 15px;
+        }
+    h2
+        {
+            font-size: 35px;
+            font-family: inherit;
+            padding-left: 40px;
+            color: #c68c53;
+            
+        
+        }
+    p
+        {
+            font-size: 28px;
+            
+            
+        }
+        #check_avability{
+            border-radius: 4px;
+            background-color:#cc9966;
+            height: 60px;
+            
+            
+        }
+        #search_button{
+            border-radius: 4px;
+            background-color:#8A6D43;
+            height: 40px;
+            width: 100px;
+            text-align: center;
+            color:white;
+            cursor: pointer;    
+        }
+        #search_button:hover
+        {
+            background-color: #9b794b;
+        }
+        input{
+            border-radius: 4px;
+            height:30px;
+            width: 150px;
+            background-color: #ccc;
+            
+        }
+        #td{
+            padding: 10px;
+        }
+        select{
+            height: 30px;
+            width: 150px;
+            border-radius: 4px;
+            background-color: #ccc;
+            border: 2px solid #ccc;
+            cursor: pointer;
+        }
+        #discrption{
+            width: auto;
+            height: auto;
+            background-color: wheat;
+            border-radius: 4px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+        
+        #lower_navbar{
+            background-color:#262626;
+            border-radius: 4px;
+            height: 450px;
+            width: auto;
+        }
+        
+        #hotel
+        {
+            background-color: #262626;
+            color: white;
+            width: 250px;
+            height: 360px;
+            margin-left: 50px;
+            margin-top: 20px;
+           position: absolute;
+        }
+        #destination
+        {
+            background-color: #262626;
+            color: white;
+            width: 250px;
+            height: 360px;
+            margin-left: 350px;
+            margin-top: 20px;
+           position: absolute;
+        }#LDC
+        {
+            background-color: #262626;
+            color: white;
+            width: 250px;
+            height: 360px;
+            margin-left: 650px;
+            margin-top: 20px;
+           position: absolute;
+        }#contact
+        {
+            background-color: #262626;
+            color: white;
+            width: 270px;
+            height: 360px;
+            margin-left: 950px;
+            margin-top: 20px;
+           position: absolute;
+        }
+        #Heading1
+        {
+            color: #c68c53;
+            font-size: 20px;
+            font-family: Univers;
+        }
+        #Sub
+        {
+            color: #bfbfbf;
+            font-size: 22px;
+            font-family: Futura;
+        }
+        #Sub1
+        {
+            color: #c68c53;
+            font-size:18px;
+            
+        }
+        #Facebook
+        {
+           
+            width: 25px;
+            height: 25px;
+            float: right;
+        }
+        #Instagram
+        {
+           
+            width: 25px;
+            height: 25px;
+            float: right;
+           
+        }
+        #Linkedin
+        {
+            
+            width: 25px;
+            height: 25px;
+            float: right;
+    
+        }
+        #wraper
+        {
+            
+           
+            background-color: black;
+            height: 0px;
+            width: 0px;
+            float: left;
+        
+        }
+        #PatternW
+        {
+            width: 50px;
+            height: 30px;
+        }
+        #email
+        {
+            color: #c68c53;
+            font-size:18px;
+            text-align: left;
+        }
+        #Bookus
+        {
+            width: 1080px;
+            height: 40px;
+            margin-left: 80px;
+            margin-right: 80px;
+            background-color: #404040;
+            }
+        #Bookus_Title
+        {
+            font-size: 30px;
+            color: #f2f2f2;
+            text-align: center;
+            font-family: Futura;
+        }
+        #Bookus_Details
+        {
+            width: 1080px;
+            height: 420px;
+            margin-left: 80px;
+            margin-right: 80px; 
+            background-color: #262626;
+         }
+        #Bookus_d1
+        {
+            margin-left: 50px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 420px;
+            height: 400px;
+            background-color: #262626;
+            position: absolute;
+            
+            
+        }
+        #Bookus_d2
+        {
+            margin-left: 600px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: 420px;
+            height: 400px;
+            background-color: #262626;
+            position: absolute;
+        }
+        #Sub2
+        {
+            color: #c68c53;
+            font-size:16px;
+            text-align: right;
+        }
+        #Copyright
+        {
+            color: #bfbfbf;
+            font-size: 16px;
+            font-family: Futura;
+            text-align: left;
+        }
+       hr
+        {
+            color: #c68c53;
+            
+        }
+        #banner
+        {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+    <script type="text/javascript">
+    </script>
+    </head>
+    <body>
+        <div id="wrapper">
+           
+            <a href="https://www.facebook.com/aromarestaurantcork/"><img id="Facebook"src="Pics/Facebook_rome.png" ></a>
+            <a href="https://www.instagram.com/a.romalifestylehotel/"><img id="Instagram"src="Pics/Instagram_rome.png"></a>
+            <a href="https://www.linkedin.com"><img id="Linkedin"src="Pics/LinkedIn_rome.png"></a>
+        </div>
+        <div id="logo">
+            <img src="Pics/Logo.jpg" style="padding-left:25px;height: 70px;width: 100px;"><br><img src="Pics/Pattern.jpg" style="padding-left:36px;height:9px;width:80px"></div><br>
+        
+        <hr>
+        <a href="#">Rooms and Suits</a>
+        <a href="#">Deals</a>
+        <a href="#">Resturents</a>
+        <a href="#">Events</a>
+        <a href="SPA.html">Spa</a>
+        <a href="Gallery.html">Hotel and Gallery</a><hr>
+        <div id="banner"><img src="Pics/Front.jpg" style="width:100%;height:100%;"></div>
+        <hr>
+        <div id="check_avability">
+            <form action="rooms.html">
+            <table>
+                <tr>
+                    <td id="td" style="padding-left:160px;"><input type="date"  placeholder="check in date" required></td>
+                     <td id="td"><input type="date" placeholder="check out date" required="true"> </td>
+                    <td id="td"><select>
+                                <option>1 Adult</option>
+                                <option>2 Adult</option>
+                                <option>3 Adults</option>
+                        </select></td>
+                    <td id="td"><select>
+                                <option>0 children</option>
+                                <option>1 children</option>
+                                <option>2 children</option>
+                        </select></td>
+                    <td id="td"><select>
+                                <option>Deluxe Room</option>
+                                <option>Premier Room</option>
+                                <option>Exective Room</option>
+                        </select></td>
+                    <td id="td">
+                        <input type="submit" id="search_button" value="Check Avability" name="" style="border: 1px solid #8A6D43">
+                    </td>
+                </tr>
+            </table>
+            </form>
+        </div><hr>
+        <h1>A Lifestyle Hotel & Conferening Center</h1>
+        <img src="Pics/Pattern.jpg" style="padding-left:38px;height:15px;width:340px">
+        <h2>Come and Discover Rome!</h2>
+        <div id="discrption">
+        <p><font size="15"><img id="PatternW"src="Pics/PatternW.png"><br>W</font>hether you're visiting Rome for business and pleasure, the A.Roma Lifestyle Hotel and conference centre is the perfect place to stay. Located only 20 minutes from the main airport, this luxury hotel and wellness spa gives you a 4 star comfort in a stylish setting. Close to St Peter's Square, the hotel is perfect venue for the business conferences, weddings and leisure travel. From the gourmet show kitchen restaurant to the stunning gardens, Wellness Spa and outdoor pool, you'll love your stay at A.Roma Lifestyle Hotel.The hotel has been carefully constructed to blend-in with the stunning Italian surroundings of the Eternal City, where attentive staff are on hand to help with your every need during your stay. Bring the family or invite your business associates to join you at A.Roma Lifestyle Hotel.</p>
+        </div>
+        
+ <div id="Bookus"><p id="Bookus_Title">BOOK  HERE  FOR  BEST  RATES  &  EXCLUSIVE  OFFERS</p></div>
+        <div id="Bookus_Details">
+            <div id="Bookus_d1">
+                <p id="Sub">:- Book directly for best prices.<br>
+                :- Welcome drink and late check-out.<br>
+                :- Stay 3+ nights for FREE airport pick-up.<br>
+                :- Book now, pay later, no deposit or fees.<br>
+                :- Recieve free cancelation upto 24 hours.<br>
+                :- Free call and email confirmation.<br>
+                :- Luxury Spa, Wellness Center and Pool.<br>
+                :- Executive rooms, junior and full suited.<br>
+                :- Located just 2o minutes frim the airport.<br>
+                :- Complimentary Wi-Fi.<br>
+                :- State-of-the-art conference facilities.<br>
+                :- Shuttle bus service to  Rome city center
+                </p>
+            </div>
+                <div id="Bookus_d2">
+                    <p id="Sub">
+                        Mini Bar<br>
+                        Video Game Player<br>
+                        Banquet Facilities<br>
+                        Doctor on Call<br>
+                        Library<br>
+                        Housekeeping<br>
+                        Disabled Guest Facility<br>
+                        Garden<br>
+                        Pool/Snooker Table<br>
+                        Outdoor Games<br>
+                        Butler Service<br>
+                        Laundry
+                 </p>
+            </div>
+        </div>
+        <br>
+        
+        <div id="lower_navbar">
+            <div id="hotel">
+            <p id="Heading1">Hotel</p>
+            <p id="Sub">  A.roma Lifestyle <br>Relais Sant'Uffizio<br>Relais Villa Monte Solare<br>Villa Ortaglia Florence<br>Palais e China Hotel<br>Fleur de China Hotel<br>Palazzo Venart Hotel </p><br><br>
+                <p id="Copyright">All rights reserved 2017 </p>
+            
+            
+            </div>
+            <div id="destination">
+            <p id="Heading1">Destination</p>
+            <p id="Sub"> Rome, Italy<br>Piedmont, Italy <br>Umbria ,Italy<br> Venice, Italy<br>Florence, Italy<br>Taipei, Taiwan<br>Sun Moon Lake, Taiwan   </p>
+            
+            
+            </div>
+            <div id="LDC">
+                <p id="Heading1">LDC</p>
+                    <p id="Sub">LDC Italian Hotel<br>About<br>News<br>Carrer</p>
+            </div>
+            
+            <div id="contact">
+                <p id="Heading1">Book & Contact</p>
+                    <p id="Sub1">  Book Now   </p>
+                        <p id="Sub">Tel. +39 0687 800168<br>Fax. +39 0687 811813</p>
+                <p id="Sub1"><a id="email" href="https://www.google.com/gmail/"><br>info.aroma@ldchotels.com</a></p>
+                        <p id="Sub">LDC Rome Hotel Srl Via<br>Giorgio Zoiga 59 00264<br>Rome, Italy </p><br>
+                <p id="Sub2">Privacy Policy</p>
+            </div>
+        </div>
+ 
+
+</body>    
+   
+</html>

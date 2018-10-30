@@ -1,0 +1,153 @@
+body
+{
+	padding: 0;
+	margin:0;
+	background:;
+}
+.bowl
+{
+	position: absolute;
+	//top:50%;
+	//left: 50%;
+	//transform:translate(-50%,-50%);
+	width: 300px;
+	height: 300px;
+	background: #F8F9F9;
+	border-radius: 50%;
+	border: 4px solid #262626;
+	transform-origin: bottom center;
+	animation: animate 5s linear infinite;
+}
+.bowl:before
+{
+	content: '';
+	position:absolute;
+	top:-10px;
+	left: 50%;
+	transform: translate(-50%);
+	width:40%;
+	height: 30px;
+	background: #F8F9F9;
+	border-radius: 50%;
+	border: 4px solid #262626;
+}
+.bowl:after
+{	
+	content: '';
+	position: absolute;
+	top:30%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 150px;
+	height: 80px;
+	background: #ECF0F1;
+	border-radius: 50%;
+}
+.water
+{
+	position: absolute;
+	top:50%;
+	left:5px;
+	right: 5px;
+	bottom: 5px;
+	border-bottom-left-radius: 150px;
+	border-bottom-right-radius: 150px;
+	background: rgba(93, 173, 226,.8);
+	transform-origin: top center;
+	animation: moveWater 5s linear infinite;
+}
+.water:before
+{
+	position: absolute;
+	content: '';
+	top:-10px;
+	left: 0;
+	width: 100%;
+	height: 20px;
+	border-radius: 50%;
+	background: rgba(93, 173, 226,1);
+}
+.shadow
+{
+	position: absolute;
+	top:75%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width: 300px;
+	height: 50px;
+	background: #ccc;
+	border-radius: 50%;
+	z-index: -1;
+}
+img.fish
+{	
+	position: absolute;
+	top:10px;
+	width:80px;
+	animation: moveFish 5s linear infinite;
+}
+@keyframes moveFish
+{
+	0%
+	{
+		transform:translate(0,0)  rotateY(180deg);
+	}
+	50%
+	{
+		transform: translate(190px,0) rotateY(180deg);
+	}
+	51%
+	{
+		transform: translate(190px,0) rotateY(0deg);
+	}
+	100%
+	{
+		transform: translate(0,0) rotateY(0deg);
+	}
+}
+@keyframes animate
+{
+	0%
+	{
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+	25%
+	{
+		transform: translate(-50%,-50%) rotate(15deg);
+	}
+	50%
+	{
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+	75%
+	{
+		transform: translate(-50%,-50%) rotate(-15deg);
+	}
+	100%
+	{
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+}
+@keyframes moveWater
+{
+	0%
+	{
+		transform:  rotate(0deg);
+	}
+	25%
+	{
+		transform:  rotate(-20deg);
+	}
+	50%
+	{
+		transform:  rotate(0deg);
+	}
+	75%
+	{
+		transform: rotate(20deg);
+	}
+	100%
+	{
+		transform: rotate(0deg);
+	}
+}
