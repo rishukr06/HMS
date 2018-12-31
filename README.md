@@ -1,3 +1,4 @@
 # HMS
 Hotel Management System website
-Developed by Rishu kumar , Rohit Sharma and kasif 
+Developed by Rishu kumar.
+it is only the front-end development,basically tried to develop a responsive design.
